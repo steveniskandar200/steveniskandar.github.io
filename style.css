@@ -1,0 +1,140 @@
+/* Import Open Sans font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+/* Apply Open Sans font globally */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #666666;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+nav{
+    position: relative;
+    margin: 190px auto 0;
+    width: 590px;
+    height: 50px;
+    border: 2px solid #151616;
+    background: #f0f0f0;
+    border-radius: 8px;
+    font-size: 0px;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+}
+
+nav a{
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+}
+
+nav .animation{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    background: #151616;
+    width: 0px;
+    border-radius: 1px;
+    transition: all .2s ease 0s;
+}
+
+a:nth-child(1) {
+    width: 100px;
+}
+
+nav .start-about,a:nth-child(1):hover~.animation{
+    width: 100px;
+    left: 0px;
+}
+
+a:nth-child(2) {
+    width: 110px;
+}
+
+nav .start-experience,a:nth-child(2):hover~.animation{
+    width: 110px;
+    left: 100px;
+}
+
+a:nth-child(3) {
+    width: 100px;
+}
+
+nav .start-projects,a:nth-child(3):hover~.animation{
+    width: 100px;
+    left: 210px;
+}
+
+a:nth-child(4) {
+    width: 160px;
+}
+
+nav .start-education,a:nth-child(4):hover~.animation{
+    width: 160px;
+    left: 310px;
+}
+
+a:nth-child(5) {
+    width: 120px;
+}
+
+nav .start-experience,a:nth-child(5):hover~.animation{
+    width: 120px;
+    left: 470px;
+}
+
+/* General styling for headings */
+h1 {
+    font-weight: 700;
+    font-size: 130px;
+    line-height: 110px;
+    margin: 0 auto 30px;
+    max-width: 600px;
+    text-align: left;
+    color: #333333;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 140px;
+    line-height: 90px;
+    margin: 0 auto 40px;
+    max-width: 600px;
+    text-align: left;
+    color: #333333;
+}
+
+/* General styling for paragraphs */
+p {
+    margin: 0 auto 15px;
+    text-align: left;
+    max-width: 600px;
+    font-weight: 700;
+}
+
+/* Links styling */
+a {
+    color: #666666;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color:#FFFFFF;
+}
+
+/* Container for layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
