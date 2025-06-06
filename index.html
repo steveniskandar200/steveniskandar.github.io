@@ -1,8 +1,86 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=home.html" />
-  </head>
-  <body></body>
+    <head>
+        <title>Loading</title>
+        <style type ="text/css">
+            body{
+                margin: 0;
+                padding: 0;
+                background: #000000;
+            }
+            .loading{
+                height: 50px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                display: flex;
+                align-items: center;
+                position: absolute;
+            }
+            .object{
+                position: relative;
+                width: 6px;
+                height: 50px;
+                background: white;
+                margin: 0 3px;
+                border-radius: 10px;
+                animation: load 0.9s infinite;
+            }
+
+            .object:nth-child(2){
+                animation-delay: 0.1s;
+            }
+            .object:nth-child(3){
+                animation-delay: 0.2s;
+            }
+            .object:nth-child(4){
+                animation-delay: 0.3s;
+            }
+            .object:nth-child(5){
+                animation-delay: 0.4s;
+            }
+            .object:nth-child(6){
+                animation-delay: 0.5s;
+            }
+            .object:nth-child(7){
+                animation-delay: 0.6s;
+            }
+            .object:nth-child(8){
+                animation-delay: 0.7s;
+            }
+
+            @keyframes load{
+                0%{
+                    height: 0;
+                }
+                50%{
+                    height: 50px;
+                }
+                100%{
+                    height: 0;
+                }
+            }
+        </style>
+
+        <script>
+            setTimeout(function() {
+                sessionStorage.removeItem('loaded');
+                window.location.href = 'home.html';
+            }, 3000);
+        </script>
+    </head>
+<body>
+
+<div class = "loading">
+    <div class ="object"></div>
+    <div class ="object"></div>
+    <div class ="object"></div>
+    <div class ="object"></div>
+    <div class ="object"></div>
+    <div class ="object"></div>
+    <div class ="object"></div>
+    <div class ="object"></div>
+  </div>
+
+</body>
 </html>
-<!-- This HTML file redirects to home.html immediately. -->
