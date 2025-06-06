@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script>
+    if (!sessionStorage.getItem('loaded')){
+      sessionStorage.setItem('loaded', 'true');
+      window.location.href = 'loading.html';
+    }
+  </script>
+  
   <title>Steven's Website</title>
   <link rel ="stylesheet" type="text/css" href="style.css">
 </head>
